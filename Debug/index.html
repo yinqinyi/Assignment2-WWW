@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header/Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+            font-size: 14px;
+            color: #f5f5f7;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        header nav ul li:hover {
+            opacity: 0.8;
+        }
+
+        .logo {
+            font-size: 20px;
+            color: #f5f5f7;
+        }
+
+        .icons {
+            display: flex;
+        }
+
+        .icons li {
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 44px 20px 0;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 28px;
+            font-weight: 400;
+            margin: 10px 0 20px;
+        }
+
+        .hero .cta {
+            font-size: 17px;
+            color: #2997ff;
+            margin: 10px;
+        }
+
+        .hero .cta:hover {
+            text-decoration: underline;
+        }
+
+        /* Product Sections */
+        .product-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 12px;
+            padding: 20px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            text-align: center;
+            padding: 40px 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.02);
+        }
+
+        .product-card h2 {
+            font-size: 40px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            font-size: 19px;
+            color: #86868b;
+            margin: 0;
+        }
+
+        .product-card .price {
+            font-size: 17px;
+            margin: 10px 0;
+        }
+
+        .product-card .buy {
+            background-color: #0071e3;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f5f5f7;
+            padding: 40px 20px;
+            font-size: 12px;
+            color: #86868b;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer ul li {
+            margin: 5px 10px;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero > *, .product-card {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            .hero p {
+                font-size: 21px;
+            }
+            header nav ul li {
+                margin: 0 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"></li>
+                <li>Store</li>
+                <li>Mac</li>
+                <li>iPad</li>
+                <li>iPhone</li>
+                <li>Watch</li>
+                <li>Vision</li>
+                <li>AirPods</li>
+                <li>TV & Home</li>
+                <li>Entertainment</li>
+                <li>Accessories</li>
+                <li>Support</li>
+            </ul>
+        </nav>
+        <ul class="icons">
+            <li>🔍</li>
+            <li>🛍️</li>
+        </ul>
+    </header>
+
+    <section class="hero">
+        <h1>iPhone 17 Pro</h1>
+        <p>A camera so advanced it feels like magic.</p>
+        <a href="#" class="cta">Learn more ></a>
+        <a href="#" class="cta">Buy ></a>
+    </section>
+
+    <section class="product-section">
+        <div class="product-card">
+            <h2>MacBook Pro</h2>
+            <p>Supercharged by M4 Pro and M4 Max.</p>
+            <div class="price">From $1999</div>
+            <a href="#" class="buy">Buy</a>
+        </div>
+        <div class="product-card">
+            <h2>Apple Watch Series 10</h2>
+            <p>Thinner. Lighter. Brilliant.</p>
+            <div class="price">From $399</div>
+            <a href="#" class="buy">Buy</a>
+        </div>
+        <div class="product-card">
+            <h2>iPad Pro</h2>
+            <p>Outrageously powerful device for AI.</p>
+            <div class="price">From $999</div>
+            <a href="#" class="buy">Buy</a>
+        </div>
+        <div class="product-card">
+            <h2>AirPods Pro 2</h2>
+            <p>Hearing Aid feature now available.</p>
+            <div class="price">From $249</div>
+            <a href="#" class="buy">Buy</a>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#">Shop and Learn</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Apple Store</a></li>
+            <li><a href="#">For Business</a></li>
+            <li><a href="#">For Education</a></li>
+            <li><a href="#">Apple Values</a></li>
+            <li><a href="#">About Apple</a></li>
+        </ul>
+        <p>Copyright © 2025 Apple Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
